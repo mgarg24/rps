@@ -9,14 +9,73 @@
 <body>
     <script>
 
-        function getComputerChoice() {
+        function get() {
 
             const array = ["rock", "paper", "scissors"];
             const randomIndex = Math.floor(Math.random() * array.length);
 
             return array[randomIndex];
         }
+        
+        
 
+        function playgame(playerSelection, computerSelection){
+
+            console.log(computerSelection);
+            playerSelection = playerSelection.toLowerCase();
+            if ((playerSelection === "paper" & computerSelection === "paper") || 
+            (playerSelection === "rock" & computerSelection === "rock") || 
+            (playerSelection === "scissors" & computerSelection === "scissors") ){
+
+                console.log("tie");
+            }
+            
+            else if ((playerSelection === "paper" & computerSelection === "rock") || 
+            (playerSelection === "rock" & computerSelection === "scissors") || 
+            (playerSelection === "scissors" & computerSelection === "paper") ) {
+                console.log("you win");
+
+                return true;
+            }
+            else{
+                console.log("you lose");
+
+                return false;
+            }
+        }   
+
+        function game () {
+
+            for (let i = 0; i < 5; i++) {
+                
+
+                let pchoice = prompt("Rock, Paper or Scissors?");
+
+                let result = playgame (pchoice, get());
+
+                let playerpoint=0;
+                let cpoint = 0;
+
+                if (result === true){
+                    
+                    playerpoint++;
+
+                }
+                else if (result ===false){
+                    cpoint++;
+                }
+
+                if (i===5){
+
+                    if (playerpoint>cpoint){
+
+                        
+                    }
+                }
+            }
+
+
+        }
     </script>
 </body>
 </html>
