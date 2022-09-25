@@ -45,35 +45,49 @@
         }   
 
         function game () {
-
+            let playerpoint=0;
+                let cpoint = 0;
             for (let i = 0; i < 5; i++) {
                 
 
                 let pchoice = prompt("Rock, Paper or Scissors?");
 
                 let result = playgame (pchoice, get());
-
-                let playerpoint=0;
-                let cpoint = 0;
+                
+                
 
                 if (result === true){
                     
                     playerpoint++;
 
+                    console.log(playerpoint);
+
                 }
                 else if (result ===false){
                     cpoint++;
+
+                    console.log(cpoint);
                 }
 
-                if (i===5){
+                
 
-                    if (playerpoint>cpoint){
-
-                        
-                    }
-                }
+                    
+                
             }
 
+            if (playerpoint > cpoint){
+                        
+                        console.log("you win!!");
+
+                    }
+            else if (cpoint>playerpoint){
+
+                        console.log("you lose!!");
+
+                    }
+            else {
+                        console.log("tie");
+            }
 
         }
     </script>
