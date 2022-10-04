@@ -4,92 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <script>
 
-        function get() {
+    <span></span>
+    <div class="scoreboard">
+        <div class="one">
+            <div class="player"> Player Score </div>
+            <div class="ui"> UI Score </div>
+        </div>
+        <div class="two">
+            <div class="Scorep">0</div>
+            <div class="Scoreui"> 0 </div>
+        </div>
+    </div>
 
-            const array = ["rock", "paper", "scissors"];
-            const randomIndex = Math.floor(Math.random() * array.length);
+    <div class="btn">
 
-            return array[randomIndex];
-        }
-        
-        
+        <button class="rock"> Rock </button>;
 
-        function playgame(playerSelection, computerSelection){
+        <button class="paper"> Paper</button>;
 
-            console.log(computerSelection);
-            playerSelection = playerSelection.toLowerCase();
-            if ((playerSelection === "paper" & computerSelection === "paper") || 
-            (playerSelection === "rock" & computerSelection === "rock") || 
-            (playerSelection === "scissors" & computerSelection === "scissors") ){
+        <button class="scissors"> Scissors</button>;
+    </div>
 
-                console.log("tie");
-            }
-            
-            else if ((playerSelection === "paper" & computerSelection === "rock") || 
-            (playerSelection === "rock" & computerSelection === "scissors") || 
-            (playerSelection === "scissors" & computerSelection === "paper") ) {
-                console.log("you win");
+   
 
-                return true;
-            }
-            else{
-                console.log("you lose");
+    
+ </body>
 
-                return false;
-            }
-        }   
-
-        function game () {
-            let playerpoint=0;
-                let cpoint = 0;
-            for (let i = 0; i < 5; i++) {
-                
-
-                let pchoice = prompt("Rock, Paper or Scissors?");
-
-                let result = playgame (pchoice, get());
-                
-                
-
-                if (result === true){
-                    
-                    playerpoint++;
-
-                    console.log(playerpoint);
-
-                }
-                else if (result ===false){
-                    cpoint++;
-
-                    console.log(cpoint);
-                }
-
-                
-
-                    
-                
-            }
-
-            if (playerpoint > cpoint){
-                        
-                        console.log("you win!!");
-
-                    }
-            else if (cpoint>playerpoint){
-
-                        console.log("you lose!!");
-
-                    }
-            else {
-                        console.log("tie");
-            }
-
-        }
-    </script>
-</body>
+<script src ="stuff.js"></script>;
 </html>
